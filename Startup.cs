@@ -1,4 +1,5 @@
 ﻿using AzurePostgreSQLDemo.Data;
+using HealthChecks.UI.Client;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.AspNetCore.Identity;
@@ -9,8 +10,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using HealthChecks.UI.Client;
-using Npgsql;
 
 namespace AzurePostgreSQLDemo
 {
@@ -76,9 +75,7 @@ namespace AzurePostgreSQLDemo
                 Predicate = req => true,
                 ResponseWriter = UIResponseWriter.WriteHealthCheckUIResponse
             });
-
             app.UseHealthChecksUI();
-
 
             app.UseAuthentication();
 

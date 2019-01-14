@@ -6,11 +6,6 @@
     <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
   </PropertyGroup>
 
-
-  <ItemGroup>
-    <None Update="app.db" CopyToOutputDirectory="PreserveNewest" />
-  </ItemGroup>
-
   <ItemGroup>
     <PackageReference Include="AspNetCore.HealthChecks.UI" Version="2.2.9" />
     <PackageReference Include="AspNetCore.HealthChecks.NpgSql" Version="2.2.0" />
